@@ -4,7 +4,7 @@
 git clone
 
 ```
-git clone https://github.com/liangfengbo/nodejs-koa2-mysql-sequelize-jwt.git
+git clone https://github.com/jm821323/takeOrder.git
 ```
 
 1.1.安装
@@ -36,33 +36,6 @@ const router = new Router({
     prefix: '/api/v1'
 })
 
-/**
- * 用户接口
- */
-// 用户注册
-router.post('/user', UserController.create);
-// 用户登录
-router.post('/user/login', UserController.login);
-// 获取用户信息
-router.get('/user', UserController.getUserInfo);
-// 获取用户列表
-router.get('/user/list', UserController.getUserList);
-// 删除用户
-router.delete('/user/:id', UserController.delete);
-
-/**
- * 文章接口
- */
-// 创建文章
-router.post('/article', ArticleController.create);
-// 获取文章列表
-router.get('/article', ArticleController.getArticleList);
-// 获取文章详情
-router.get('/article/:id', ArticleController.detail);
-// 删除文章
-router.delete('/article/:id', ArticleController.delete);
-// 更改文章
-router.put('/article/:id', ArticleController.update);
 
 ```
 
@@ -258,7 +231,7 @@ http://localhost:3000/api/v1/user/login?username=贾明&password=ming12345
     "message": "登录成功！",
     "data": {
         "id": 5,
-        "username": "梁凤波bo",
+        "username": "jiaming",
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IuaigeWHpOazomJvIiwiaWQiOjUsImlhdCI6MTUyNzczNjc2NSwiZXhwIjoxNTI3NzQwMzY1fQ.y5w4lEFRf8bpR4fFPNDms1m9WSX9mfQ3fo5dejG7y3A"
     },
     "code": 200
